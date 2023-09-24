@@ -9,10 +9,11 @@ def hello_world():
     return 'Hello world!'
 
 
+# returns date time in UTC
 @app.route('/time')
 def get_time():
-    now = datetime.now()
-    current_time = now.strftime("%H:%M:%S")
+    now = datetime.utcnow()
+    current_time = now.strftime("%m/%d/%Y %H:%M:%S")
     return current_time
 
 
